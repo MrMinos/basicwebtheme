@@ -1,14 +1,9 @@
 <a href="/" style="text-decoration: none">
   {{ if (.Params.HeaderText) }}
-  <p style="font-family:monospace">{{ .Params.HeaderText }}</p>
-  {{ else if (.Params.HeaderImage) }}
-  <img src="{{ .Params.HeaderImage }}" />
-  {{ else if ($.Site.Params.HeaderImage) }}
-  <img src="{{ $.Site.Params.HeaderImage }}" />
+  <p style="font-family:monospace"><b>{{ .Params.HeaderText }}</b></p>
   {{ else if ($.Site.Params.HeaderText) }}
-  <p style="font-family:monospace">{{ $.Site.Params.HeaderText }}</p>
-  {{ else }}
-  <span id="some kind of header should go here"></span>
+  <p style="font-family:monospace"><b>{{ $.Site.Params.HeaderText }}</b></p>
   {{ end }}
+
 </a>
 <hr />
