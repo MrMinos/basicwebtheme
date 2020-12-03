@@ -15,7 +15,7 @@
     {{ if .page.PublishDate }}
     <h2>{{ .page.Title }}</h2>
     <a href={{ .page.Permalink }}>
-      <em>{{ .page.PublishDate.Format "January 2, 2006" }}</em>
+      <em>{{ .page.PublishDate.Format "January 2006" }}</em>
     </a>
     {{ else }}
     <a href={{ .page.Permalink }}>
