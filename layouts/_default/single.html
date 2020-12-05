@@ -3,6 +3,9 @@
 {{ with .Param "skipTitle"  }}
 {{ else }}
 <h2>{{ $.Title }}</h2>
+{{ if .Param "SubTitle" }}
+<em>{{ .Param "SubTitle" }}</em><br/><br/>
+{{ end }}
 {{ end }}
 
 {{ if .PublishDate }}
