@@ -13,6 +13,10 @@ body {
   font-family: sans-serif;
 }
 
+a {
+  color: inherit;
+}
+
 h2 {
     margin-top: 0px;
 }
