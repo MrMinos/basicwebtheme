@@ -1,9 +1,26 @@
 <a href="/" style="text-decoration: none">
-  {{ if (.Params.HeaderText) }}
-  <p style="font-family:monospace"><b>{{ .Params.HeaderText }}</b></p>
-  {{ else if ($.Site.Params.HeaderText) }}
-  <p style="font-family:monospace"><b>{{ $.Site.Params.HeaderText }}</b></p>
+{{if .IsHome}}
+  {{ if (.Params.HeaderImage) }}
+    <img src="{{ .Params.HeaderImage }}" class="header-image-home"/>
+  {{ else if ($.Site.Params.HeaderImage) }}
+    <img src="{{ $.Site.Params.HeaderImage }}" class="header-image-home"/>
   {{ end }}
-
+  {{ if (.Params.HeaderText) }}
+    <p style="font-family:monospace"><b>{{ .Params.HeaderText }}</b></p>
+  {{ else if ($.Site.Params.HeaderText) }}
+    <p style="font-family:monospace"><b>{{ $.Site.Params.HeaderText }}</b></p>
+  {{ end }}
+{{ else }}
+  {{ if (.Params.HeaderImage) }}
+    <img src="{{ .Params.HeaderImage }}" class="header-image"/>
+  {{ else if ($.Site.Params.HeaderImage) }}
+    <img src="{{ $.Site.Params.HeaderImage }}" class="header-image"/>
+  {{ end }}
+  {{ if (.Params.HeaderText) }}
+    <p style="font-family:monospace"><b>{{ .Params.HeaderText }}</b></p>
+  {{ else if ($.Site.Params.HeaderText) }}
+    <p style="font-family:monospace"><b>{{ $.Site.Params.HeaderText }}</b></p>
+  {{ end }}
+{{ end }}
 </a>
 <hr />
