@@ -8,7 +8,7 @@
 <img src="{{ $.Site.Params.HeaderImage }}" class="header-image"/>
 {{ end }}
 <br>
-Enginerd<br>
+<p>Enginerd<br>
 <a href="./maybe/" style="color: inherit">writing</a> |
 <!-- meh <a href="./blog/" style="color: inherit">leetcode</a> |-->
 <a style="color:inherit" disabled>photos</a> |
@@ -18,6 +18,8 @@ Enginerd<br>
 <a href="cs184/" rel="nofollow" style="color:inherit">cs184</a> |
 <a href="./ocf/" style="color:inherit">ocf</a> |
 <a href="./sunset/" style="color:inherit">sunset</a> 
+</p>
+
 {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 
 {{ range $pages }}
