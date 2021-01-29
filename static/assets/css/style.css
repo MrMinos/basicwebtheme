@@ -43,7 +43,6 @@ blockquote {
 
 pre,
 code {
-  overflow-x: scroll;
   padding-bottom: 25px;
   color: #3b3b3b;
   font-size: 95%;
